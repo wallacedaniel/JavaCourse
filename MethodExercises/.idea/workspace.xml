@@ -29,23 +29,37 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
-  <component name="RunManager" selected="Application.TeenNumberChecker">
-    <configuration name="EqualSumChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EqualSumChecker" />
+  <component name="RunManager" selected="Application.LeapYearCalculator">
+    <configuration name="AreaCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AreaCalculator" />
       <module name="MethodExercises" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MegaBytesConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MegaBytesConverter" />
+    <configuration name="EqualityPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EqualityPrinter" />
       <module name="MethodExercises" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TeenNumberChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TeenNumberChecker" />
+    <configuration name="LeapYearCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeapYearCalculator" />
+      <module name="MethodExercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayingCat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PlayingCat" />
+      <module name="MethodExercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecondsAndMinutes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SecondsAndMinutes" />
       <module name="MethodExercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -53,9 +67,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TeenNumberChecker" />
-        <item itemvalue="Application.EqualSumChecker" />
-        <item itemvalue="Application.MegaBytesConverter" />
+        <item itemvalue="Application.LeapYearCalculator" />
+        <item itemvalue="Application.SecondsAndMinutes" />
+        <item itemvalue="Application.PlayingCat" />
+        <item itemvalue="Application.EqualityPrinter" />
+        <item itemvalue="Application.AreaCalculator" />
       </list>
     </recent_temporary>
   </component>
@@ -69,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629773114917</updated>
-      <workItem from="1629773123032" duration="4750000" />
+      <workItem from="1629773123032" duration="13926000" />
     </task>
     <servers />
   </component>
@@ -77,21 +93,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1629781584826">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1629910703144">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629781584826" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1629781584824">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1629824002641" />
+    <state width="1107" height="245" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1629824365330" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1629910703144" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1629910703143">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629781584824" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1629781584823">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1629824002640" />
+    <state width="1107" height="245" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1629824365329" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1629910703143" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1629910703142">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629781584823" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1629781584825">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1629824002639" />
+    <state width="1107" height="245" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1629824365329" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1629910703142" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1629910703144">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629781584825" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1629824002640" />
+    <state width="1107" height="245" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1629824365330" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1629910703144" />
+    <state x="97" y="72" key="new project wizard" timestamp="1629915450082">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="97" y="72" key="new project wizard/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1629915450082" />
+    <state x="97" y="72" key="new project wizard/1440.23.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1629910874287" />
   </component>
 </project>

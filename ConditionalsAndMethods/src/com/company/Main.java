@@ -19,10 +19,18 @@ public class Main {
 
     }
 
+    //1 inch = 2.54 cm
+    public static int calcFeetAndInchesToCentimeters(int feet, int inches) {
 
+        if (feet <= 0 || inches <= 0 || inches >= 12) return -1;
 
+    }
 
+    public static int calcFeetAndInchesToCentimeters(int inches) {
 
+        if (inches <= 0 || inches >= 12) return -1;
+
+    }
 
 
 
