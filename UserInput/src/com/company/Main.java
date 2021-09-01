@@ -50,6 +50,33 @@ public class Main {
         }
 
         System.out.println("sum = " + sum);
+
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        while (true) {
+
+            System.out.println("Enter number:");
+            boolean isAnInt = scanner.hasNextInt();
+
+            if (isAnInt){
+
+                int number = scanner.nextInt();
+
+                if (number > max) {
+                    max = number;
+                }
+
+                if (number < min) {
+                    min = number;
+                }
+            } else {
+                break;
+            }
+                scanner.nextLine();
+        }
+
+        System.out.println("Minimum was = " + min + " and Maximum was = " + max);
         scanner.close();
     }
 }

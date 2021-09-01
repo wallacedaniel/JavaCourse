@@ -144,7 +144,28 @@ public class Main {
         System.out.println("numberAsString = " + numberAsString);
         System.out.println("number2 = " + number2);
 
+        System.out.println("Sum of digits 12345 = " + sumDigits(12345));
 
+        
+    }
+
+    public static int sumDigits(int number){
+
+        if (number < 10) {
+            return -1;
+        }
+
+        int sum = 0;
+
+        while (number > 0){
+
+            int digit = number % 10;
+            sum += digit;
+
+            number /= 10;
+        }
+
+        return sum;
     }
 
     public static double calculateInterest(double amount, double interestRate){
