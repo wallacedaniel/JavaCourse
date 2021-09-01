@@ -126,6 +126,25 @@ public class Main {
         }
 
         System.out.println("Total even numbers found = " + evenNumbersFound);
+
+
+        String numberAsString = "2021";
+        String doubleAsString = "2021.50";
+        System.out.println("numberAsString = " + numberAsString);
+
+        int number2 = Integer.parseInt(numberAsString);
+        System.out.println("number2 = " + number2);
+        double number3 = Double.parseDouble(doubleAsString);
+        System.out.println("doubleAsString = " + doubleAsString);
+        // float and long etc as well
+
+        numberAsString += 1;
+        number2 += 1;
+
+        System.out.println("numberAsString = " + numberAsString);
+        System.out.println("number2 = " + number2);
+
+
     }
 
     public static double calculateInterest(double amount, double interestRate){
