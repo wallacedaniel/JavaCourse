@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55dd9dc1-5226-47db-aadb-3e8cc549840d" name="Default Changelist" comment="" />
+    <list default="true" id="55dd9dc1-5226-47db-aadb-3e8cc549840d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ConditionalsAndMethods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConditionalsAndMethods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MethodExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MethodExercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MethodExercises/src/DecimalComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MethodExercises/src/DecimalComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Operators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Operators/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1x9J6wBtX39iDADKbUjI9sJWkcu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -47,6 +56,7 @@
       <workItem from="1629761200200" duration="1410000" />
       <workItem from="1629762926649" duration="70000" />
       <workItem from="1629763049947" duration="58000" />
+      <workItem from="1630542340321" duration="22000" />
     </task>
     <servers />
   </component>
