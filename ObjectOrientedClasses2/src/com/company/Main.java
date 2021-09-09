@@ -1,5 +1,7 @@
 package com.company;
 
+import java.beans.EventHandler;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,5 +31,34 @@ public class Main {
         bedroom.makeBed();
 
         bedroom.getLamp().turnOn();
+
+//        Player player = new Player() ;
+//        player.fullName = "Daniel";
+//        player .health = 20;
+//        player.weapon = "Sword";
+//
+//        int damage = 10;
+//        player.loseHealth(damage);
+//        System.out.println("Remaining health = " + player.healthRemaining());
+//
+//        damage = 11;
+//        player.loseHealth(damage);
+//        System.out.println("Remaining health = " + player.healthRemaining());
+
+        EnhancedPlayer player = new EnhancedPlayer("Daniel", 200, "Sword");
+        System.out.println("Initial health is " + player.getHealth());
+
+        Printer printer = new Printer(50, true);
+        System.out.println(("initial page count = " + printer.getPagesPrinted()));
+        int pagesPrinted = printer.printPages(4);
+        System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
+        pagesPrinted = printer.printPages(2);
+        System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
+
+
+
+
+
+
     }
 }

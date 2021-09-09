@@ -14,6 +14,23 @@ public class GreatestCommonDivisor {
             return -1;
         }
 
+        int greatestCommonDivisor = 1;
+        int counterValue = 0;
 
+        //first <= second ? lesserValue = first : lesserValue = second;  // error ** variable expected?
+        if (first <= second) {
+            counterValue = first;
+        } else {
+            counterValue = second;
+        }
+
+        while(counterValue >= 2){
+            if (first % counterValue == 0 && second % counterValue == 0) {
+                greatestCommonDivisor = counterValue;
+                break;
+            }
+            counterValue--;
+        }
+        return greatestCommonDivisor;
     }
 }
