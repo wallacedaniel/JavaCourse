@@ -8,12 +8,60 @@ import java.util.Scanner;
 public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static MobilePhone mobilePhone = new MobilePhone("9713225162");
+
     private static GroceryList groceryList = new GroceryList();
 
     public static void main(String[] args) {
 
-        boolean quit = false;
+        boolean editingContacts = true;
         int choice = 0;
+        displayOptions();
+
+        while(editingContacts) {
+            System.out.println("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch(choice) {
+                case 0:
+                    displayOptions();
+                    break;
+                case 1:
+                    mobilePhone.printContactList();
+                    break;
+                case 2:
+                    addContact();
+                    break;
+                case 3:
+                    modifyContact();
+                    break;
+                case 4:
+                    removeContact();
+                    break;
+                case 5:
+                    searchContacts();
+                    break;
+                case 6:
+                    processContactList();
+                    break;
+                case 7:
+                    editingContacts = false;
+                    break;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        boolean quit = false;
+        choice = 0;
         printInstructions();
         while(!quit) {
             System.out.println("Enter your choice: ");
@@ -111,6 +159,72 @@ public class Main {
         System.out.println("after modify anotherArray = " + Arrays.toString(anotherArray));
     }
 
+    public static void displayOptions() {
+        System.out.println("\nPress ");
+        System.out.println("\n 0 - To print choice options.");
+        System.out.println("\n 1 - To display all contacts.");
+        System.out.println("\n 2 - To add a new contact.");
+        System.out.println("\n 3 - To update an existing contact.");
+        System.out.println("\n 4 - To remove a contact.");
+        System.out.println("\n 5 - To search for an item in the list.");
+        System.out.println("\n 6 - To quit the editing contacts.");
+    }
+
+    public static void addContact() {
+        System.out.println("Enter the contact name: ");
+        String contactName = scanner.nextLine();
+        System.out.println("Enter the contact phone number: ");
+        String contactNumber = scanner.nextLine();
+        mobilePhone.addContact(contactName, contactNumber);
+    }
+
+    public static void modifyContact() {
+        System.out.println("Enter contact name to edit: ");
+        String contactName = scanner.nextLine();
+        System.out.println("Enter new contact name: ");
+        String newContactName = scanner.nextLine();
+        System.out.println("Enter new contact number: ");
+        String newContactNumber = scanner.nextLine();
+        mobilePhone.modifyContactList(contactName, newContactName, newContactNumber);
+    }
+
+    public static void removeContact() {
+        System.out.println("Enter contact name to remove: ");
+        String contactName = scanner.nextLine();
+        mobilePhone.removeContact(contactName);
+    }
+
+    public static void searchContacts() {
+        System.out.println("Enter contact to search: ");
+        String searchItem = scanner.nextLine();
+        if(mobilePhone.onFile(searchItem)) {
+            System.out.println("Found " + searchItem + " in the contact list");
+        } else {
+            System.out.println(searchItem + " is not in the contact list");
+        }
+    }
+
+    public static void processContactList() {
+        ArrayList<Contact> newArray = new ArrayList<Contact>();
+        newArray.addAll(mobilePhone.getContactList());
+
+        ArrayList<Contact> nextArray = new ArrayList<Contact>(mobilePhone.getContactList());
+
+        Contact[] myArray = new Contact [mobilePhone.getContactList().size()];
+        myArray = mobilePhone.getContactList().toArray(myArray);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public static void printInstructions() {
         System.out.println("\nPress ");
         System.out.println("\n 0 - To print choice options.");
@@ -161,6 +275,11 @@ public class Main {
         String[] myArray = new String [groceryList.getGroceryList().size()];
         myArray = groceryList.getGroceryList().toArray(myArray);
     }
+
+
+
+
+
 
     private static void reverse(int[] array) {
 
