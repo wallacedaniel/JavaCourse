@@ -6,14 +6,18 @@ public class Cylinder extends Circle {
 
     public Cylinder(double radius, double height) {
         super(radius);
-        this.height = height;
+        if(height <= 0) {
+            this.height = 0;
+        } else {
+            this.height = height;
+        }
     }
 
     public double getHeight() {
         return height;
     }
 
-//    public double getVolume() {
-//
-//    }
+    public double getVolume() {
+        return getHeight() * this.getArea();
+    }
 }

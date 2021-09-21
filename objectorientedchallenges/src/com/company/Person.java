@@ -36,9 +36,9 @@ public class Person {
 
     public String getFullName() {
 
-        if(getLastName() != null){
+        if(getLastName() == ""){
             return getFirstName();
-        } else if (getFirstName() != null){
+        } else if (getFirstName() == ""){
             return getLastName();
         }
 

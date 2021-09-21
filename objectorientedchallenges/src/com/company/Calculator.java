@@ -10,7 +10,7 @@ public class Calculator {
         this.carpet = carpet;
     }
 
-    public void getTotalCost(){
-
+    public double getTotalCost(){
+        return carpet.getCost() * floor.getArea();
     }
 }
