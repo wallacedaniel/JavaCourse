@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62d7d04e-6a87-416d-9947-0041d154bffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ConditionalsAndMethods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConditionalsAndMethods/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConditionalsAndMethods/out/production/ConditionalsAndMethods/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/NumberInWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/NumberInWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/DiagonalStar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/DiagonalStar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/InputCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/InputCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/NumberToWords.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/NumberToWords.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/PaintJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/out/production/ControlFlowChallenges/com/company/PaintJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/DiagonalStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/DiagonalStar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/InputCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/InputCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/NumberToWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/NumberToWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/PaintJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlFlowChallenges/src/com/company/PaintJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObjectOrientedClasses2/out/production/ObjectOrientedClasses2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ObjectOrientedClasses2/out/production/ObjectOrientedClasses2/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObjectOrientedClasses2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ObjectOrientedClasses2/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/ComplexNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/ComplexNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Cuboid.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Cuboid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Cylinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/out/production/objectorientedchallenges/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/src/com/company/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/src/com/company/ComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../objectorientedchallenges/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../objectorientedchallenges/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunManager" selected="Application.DecimalComparator">
@@ -96,6 +109,7 @@
       <updated>1629773114917</updated>
       <workItem from="1629773123032" duration="22440000" />
       <workItem from="1630597478206" duration="26000" />
+      <workItem from="1632448247611" duration="49000" />
     </task>
     <servers />
   </component>
