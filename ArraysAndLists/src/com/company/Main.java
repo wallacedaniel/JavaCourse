@@ -157,6 +157,45 @@ public class Main {
 
         System.out.println("after modify myIntArray = " + Arrays.toString(myIntArray2));
         System.out.println("after modify anotherArray = " + Arrays.toString(anotherArray));
+
+
+        // autoboxing and unboxing
+        String[] strArray = new String[10];
+        int[] intArray = new int[10];
+
+        ArrayList<String> strArrayList = new ArrayList<>();
+        strArrayList.add("Whats up");
+
+        //ArrayList<int> intArrayList = new ArrayList<int>(); // invalid - prim vs class
+        //ArrayList<IntClass> intArrayList = new ArrayList<IntClass>(); // could create wrapper class
+        //intArrayList.add(new IntClass(55));  // instead use java built in wrapper classes
+        Integer integer = new Integer(55);
+        Double doubleValue = new Double(55.00);
+
+        //boxing
+        ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+        for(int i = 0; i <= 10; i++){
+            intArrayList.add(Integer.valueOf(i));
+        }
+
+        //unboxing
+        for(int i = 0; i <= 10; i++){
+            System.out.println(i + " --> " + intArrayList.get(i).intValue());
+        }
+
+        Integer myIntValue2 = 56; // simpler boxing   Integer.valueOf(56)
+        int myInt = myIntValue2.intValue();
+
+        //simpler example w doubles
+        ArrayList<Double> dblArrayList = new ArrayList<Double>();
+        for(double dbl = 0.0; dbl <= 10.0; dbl++){
+            dblArrayList.add(dbl);
+        }
+
+        //unboxing
+        for(int i = 0; i < dblArrayList.size(); i++){
+            System.out.println(i + " --> " + dblArrayList.get(i));
+        }
     }
 
     public static void displayOptions() {
@@ -334,7 +373,6 @@ public class Main {
         for(int i=0; i < values.length; i++){
             values[i] = scanner.nextInt();
         }
-
         return values;
     }
 
@@ -375,7 +413,6 @@ public class Main {
             }
         }
         return sortedArray;
-
     }
 
 }
