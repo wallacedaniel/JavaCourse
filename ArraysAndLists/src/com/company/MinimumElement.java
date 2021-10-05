@@ -6,11 +6,9 @@ public class MinimumElement {
 
     public static void main(String[] args) {
 
-//        int[] unsortedArray = getIntegers(5);
-//        int[] sorted = sortIntegers(unsortedArray);
-//        printArray(sorted);
-
-        System.out.println(readInteger());
+        int inputQty = readInteger();
+        int[] inputArray = readElements(inputQty);
+        System.out.println(findMin(inputArray));
     }
 
     private static int readInteger() {
@@ -20,44 +18,53 @@ public class MinimumElement {
         while (true) {
 
             boolean isAnInt = scanner.hasNextInt();
-            System.out.println(isAnInt);
+
             if (isAnInt) {
                 int inputNumber = scanner.nextInt();
-                scanner.close();
                 return inputNumber;
             }
             scanner.nextLine();
         }
     }
 
-//    private static int[] readElements(int count) {
-//
-//        Scanner scanner = new Scanner(System.in);
-//
-//        int[] array = new int[count];
-//
-//        for(int i=0; i < array.length; i++){
-//            System.out.println("Enter a number:");
-//            int number = scanner.nextInt();
-//            scanner.nextLine();
-//            array[i] = number;
-//        }
-//        return array;
-//    }
-//
-//    private static int findMin(int[] array) {
-//
-//        int min = Integer.MAX_VALUE;
-//
-//        for(int i=0; i < array.length; i++){
-//            int value = array[i];
-//
-//            if(value < min) {
-//                min = value;
-//            }
-//        }
-//        return min;
-//    }
+    private static int[] readElements(int count) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int[] array = new int[count];
+
+        for(int i=0; i < array.length; i++){
+
+            while (true) {
+
+                boolean isAnInt = scanner.hasNextInt();
+
+                if (isAnInt) {
+                    int inputNumber = scanner.nextInt();
+                    array[i] = inputNumber;
+                    break;
+                }
+                scanner.nextLine();
+            }
+            scanner.nextLine();
+        }
+        scanner.close();
+        return array;
+    }
+
+    private static int findMin(int[] array) {
+
+        int min = Integer.MAX_VALUE;
+
+        for(int i=0; i < array.length; i++){
+            int value = array[i];
+
+            if(value < min) {
+                min = value;
+            }
+        }
+        return min;
+    }
 }
 
 
