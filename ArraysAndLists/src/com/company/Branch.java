@@ -9,7 +9,7 @@ public class Branch {
 
     public Branch(String name) {
         this.name = name;
-        // instantiate customers
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getName() {
@@ -21,21 +21,38 @@ public class Branch {
     }
 
     public boolean newCustomer(String customerName, double initialTransaction) {
+
+        Customer customer = findCustomer(customerName);
+
+        if(customer == null) {
+            Customer newCustomer = new Customer(customerName, initialTransaction);
+            this.customers.add(newCustomer);
+            return true;
+        }
+
         return false;
     }
 
     public boolean addCustomerTransaction(String customerName, double transaction) {
+
+        Customer customer = findCustomer(customerName);
+
+        if(customer != null) {
+            customer.addTransaction(transaction);
+            return true;
+        }
         return false;
     }
 
-    private Customer findCustomer(String customerNam) {
+    private Customer findCustomer(String customerName) {
+
+        for (int i = 0; i < this.customers.size(); i++) {
+            Customer customer = this.customers.get(i);
+            if (customer.getName().equals(customerName)) {
+                return customer;
+            }
+        }
         return null;
     }
 }
-
-//  newCustomer() returns a boolean. Returns true if the customer was added successfully or false otherwise.
-//
-//  addCustomerTransaction() returns a boolean. Returns true if the customers transaction was added successfully or false otherwise.
-//
-//  findCustomer() Return the Customer if they exist, null otherwise.
 

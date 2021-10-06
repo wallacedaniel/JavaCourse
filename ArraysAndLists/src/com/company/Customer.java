@@ -7,9 +7,11 @@ public class Customer {
     private String name;
     private ArrayList<Double> transactions;
 
-    public Customer(String name, ArrayList<Double> transactions) {
+    public Customer(String name, double initialTransaction) {
         this.name = name;
-        this.transactions = ; // instantiates
+        Double transaction = initialTransaction;
+        this.transactions = new ArrayList<Double>();
+        this.transactions.add(transaction);
     }
 
     public String getName() {
@@ -20,9 +22,9 @@ public class Customer {
         return transactions;
     }
 
-    public void addTransaction() {
-
+    public void addTransaction(double transaction) {
+        Double newTransaction = transaction;
+        transactions.add(newTransaction);
     }
 }
 
- //addTransaction(), has one parameter of type double (transaction) and doesn't return anything.

@@ -9,53 +9,103 @@ public class Bank {
 
     public Bank(String name) {
         this.name = name;
-        //initialize branches
+        this.branches = new ArrayList<Branch>();
     }
 
     public boolean addBranch(String branchName){
 
+        Branch branch = findBranch(branchName);
+
+        if(branch == null) {
+            Branch newBranch = new Branch(branchName);
+            this.branches.add(newBranch);
+            return true;
+        }
         return false;
     }
 
     public boolean addCustomer( String branchName, String customerName, double initialTransaction){
 
+        Branch branch = findBranch(branchName);
+
+        if(branch != null) {
+            ArrayList<Customer> customers = branch.getCustomers();
+
+            for (int i = 0; i < customers.size(); i++) {
+
+                Customer customer = customers.get(i);
+
+                if (customer.getName().equals(customerName)) {
+                    branch.newCustomer(customerName, initialTransaction);
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     public boolean addCustomerTransaction(String branchName, String customerName, double transaction){
 
+        Branch branch = findBranch(branchName);
+
+        if(branch != null) {
+            ArrayList<Customer> customers = branch.getCustomers();
+
+            for (int i = 0; i < customers.size(); i++) {
+
+                Customer customer = customers.get(i);
+
+                if (customer.getName().equals(customerName)) {
+                    customer.addTransaction(transaction);
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
+
+
     private Branch findBranch(String branchName){
 
+        for (int i = 0; i < this.branches.size(); i++) {
+            Branch branch = this.branches.get(i);
+            if (branch.getName().equals(branchName)) {
+                return branch;
+            }
+        }
         return null;
     }
 
     public boolean listCustomers(String branchName, boolean printTransactions){
 
+        Branch branch = findBranch(branchName);
+
+        if(branch != null) {
+
+            System.out.println("Customer details for branch " + branchName);
+
+            ArrayList<Customer> customers = branch.getCustomers();
+
+            for (int i = 0; i < customers.size(); i++) {
+
+                Customer customer = customers.get(i);
+                System.out.println("Customer: " + customer.getName() + "[" + i+1 + "]");
+
+                if(printTransactions) {
+                    System.out.println("Transactions");
+
+                    ArrayList<Double> transactions = customer.getTransactions();
+                    for (int j = 0; j < transactions.size(); j++) {
+                        System.out.println("[" + i+1 + "]  Amount " + transactions.get(i));
+                    }
+                }
+            }
+            return true;
+        }
         return false;
     }
 }
 
-
-//        returns true if the branch was added successfully or false otherwise.
-//
-//        addCustomer()  ,returns a boolean. It returns true if the customer was added successfully or false otherwise.
-//
-//        addCustomerTransaction() returns true if the customers transaction was added successfully or false otherwise.
-//
-//        findBranch() Return the Branch if it exists or null otherwise.
-//
-//        listCustomers()  returns a boolean. Return true if the branch exists or false otherwise.
-//                This method prints out a list of customers.
-//
-//
-
-
-//  TIP:  In Bank, use the findBranch() method in each of the other four methods to validate a branch. Do the same thing in Branch with findCustomer()
-//          - except for the two getters.
-//  TIP:  In Customer, think about what else you need to do in the constructor when you instantiate a Customer object.
-//TIP:  Think about what methods you need to call from another class when implementing a method.
 
 
