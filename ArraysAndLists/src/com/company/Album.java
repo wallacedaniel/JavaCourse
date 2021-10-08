@@ -9,19 +9,43 @@ public class Album {
     private String artist;
     private ArrayList<Song> songs;
 
+    public Album(String name, String artist) {
+        this.name = name;
+        this.artist = artist;
+    }
+
     public  boolean addSong(String title, double duration) {
+
+        if(findSong(title) == null) {
+            this.songs.add(new Song(title, duration));
+            return true;
+        }
         return false;
     }
 
-//    public  Song addSong(String title) {
-//
+//    private Song findSong(String title) {
+//        for (int i = 0; i < this.songs.size(); i++) {
+//            Song song = this.songs.get(i);
+//            if (song.getTitle().equals(title)) {
+//                return song;
+//            }
+//        }
+//        return null;
 //    }
 
-    public  boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
-        return false;
+    private Song findSong(String title) {
+        for (Song checkedSong: this.songs) {
+            if (checkedSong.getTitle().equals(title)) {
+                return checkedSong;
+            }
+        }
+        return null;
     }
 
-    public  boolean addToPlayList(String title, LinkedList<Song> playList) {
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
+
+        findSong(playList.get(trackNumber).getTitle());
+
         return false;
     }
 }

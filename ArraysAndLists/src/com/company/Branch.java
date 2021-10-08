@@ -29,7 +29,6 @@ public class Branch {
             this.customers.add(newCustomer);
             return true;
         }
-
         return false;
     }
 
