@@ -3,18 +3,41 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+
+        MyWindow myWindow = new MyWindow("New Window");
+        myWindow.setVisible(true);
+
 	    FootballPlayer joe = new FootballPlayer("Joe");
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
-        Team<FootballPlayer> myTeam = new Team<>("Awesome Team");
-        myTeam.addPlayer(joe);
-//        myTeam.addPlayer(pat);
-//        myTeam.addPlayer(beckham);
-        System.out.println(myTeam.numPlayers());
+        Team<FootballPlayer> teamAwesome = new Team<>("Team Awesome");
+        teamAwesome.addPlayer(joe);
 
-        Team<BaseballPlayer> myTeam2 = new Team<>("OK Team");
-        myTeam2.addPlayer(pat);
-        System.out.println(myTeam2.numPlayers());
+        Team<BaseballPlayer> teamDreadful = new Team<>("Team Dreadful");
+        teamDreadful.addPlayer(pat);
+
+        Team<BaseballPlayer> anotherTeam = new Team<>("Another Team");
+
+        System.out.println(teamAwesome.numPlayers());
+
+        teamDreadful.matchResult(anotherTeam, 10, 20);
+        teamDreadful.matchResult(anotherTeam, 5, 2);
+        teamDreadful.matchResult(anotherTeam, 4, 12);
+        anotherTeam.matchResult(teamDreadful, 5, 15);
+        anotherTeam.matchResult(teamDreadful, 15, 22);
+        anotherTeam.matchResult(teamDreadful, 12, 20);
+
+        System.out.println("Rankings");
+        System.out.println(teamAwesome.getName()  + ": " +  teamAwesome.ranking());
+        System.out.println(teamDreadful.getName()  + ": " +  teamDreadful.ranking());
+        System.out.println(anotherTeam.getName()  + ": " +  anotherTeam.ranking());
+
+        System.out.println(teamDreadful.compareTo(anotherTeam));
+        System.out.println(anotherTeam.compareTo(teamDreadful));
+
+
+
+
     }
 }

@@ -12,6 +12,41 @@ public class Main {
 
     public static void main(String[] args) {
 
+    	// final .. constants .. assign in instantiation and/or in constructor
+
+    	// public left out ...
+			// package private
+
+		// static
+		// restriction is static method accessing non static methods and fields in its own class
+
+		StaticTest firstInstance = new StaticTest("instance 1");
+		System.out.println(firstInstance.getName() + " is instance number " + StaticTest.getNumInstances());
+
+		StaticTest secondInstance = new StaticTest("instance 2");
+		System.out.println(secondInstance.getName() + " is instance number " + StaticTest.getNumInstances());
+
+    	Account myAccount = new Account(("Me"));
+    	myAccount.deposit(1000);
+    	myAccount.withdraw(500);
+    	myAccount.withdraw(-200);
+    	myAccount.deposit(-20);
+    	myAccount.calculateBalance();
+
+		System.out.println("Balance is " + myAccount.getBalance());
+
+    	String var4 = "this is private to main()";
+    	ScopeCheck scopeInstance = new ScopeCheck();
+    	scopeInstance.useInner();
+    	// innerClass.var3   private not accessible here ... public would be
+
+		System.out.println("scopeInstance var1 is " + scopeInstance.getVar1());
+		System.out.println(var4);
+
+		scopeInstance.timesTwo();
+		System.out.println("****");
+		ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
+		innerClass.timesTwo();
 
     	// abstract class similar to interface .. can't instantiate  .. provide common definition of a base class that multiple derived classes can share
 			// can have member variables that are inherited  .. interface are all public static final ..
