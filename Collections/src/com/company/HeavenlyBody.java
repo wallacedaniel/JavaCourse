@@ -6,12 +6,22 @@ import java.util.Set;
 public class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
-    private  final Set<HeavenlyBody> satellites;
+    private final Set<HeavenlyBody> satellites;
+    private final BodyTypes bodyType;
 
-    public HeavenlyBody(String name, double orbitalPeriod) {
+    public enum BodyTypes {
+        STAR,
+        PLANET,
+        MOON,
+        COMET,
+        ASTEROID
+    }
+
+    public HeavenlyBody(String name, double orbitalPeriod, BodyTypes bodyType) {
         this.name = name;
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<>();
+        this.bodyType = bodyType;
     }
 
     public String getName() {
@@ -22,7 +32,11 @@ public class HeavenlyBody {
         return orbitalPeriod;
     }
 
-    public boolean addMoon(HeavenlyBody moon) {
+    public BodyTypes getBodyType() {
+        return bodyType;
+    }
+
+    public boolean addSatellite(HeavenlyBody moon) {
         return this.satellites.add(moon);
     }
 

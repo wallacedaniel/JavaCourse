@@ -1,10 +1,13 @@
 package com.company;
 
+/*
+    immutable class example
+*/
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Location {
-
+public final class Location {
     private final int locationID;
     private final String description;
     private final Map<String, Integer> exits;
@@ -32,7 +35,4 @@ public class Location {
         return new HashMap<String, Integer>(exits);
     }
 
-//    public void addExit(String direction, int location){
-//        exits.put(direction, location);
-//    }
 }
