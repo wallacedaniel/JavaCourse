@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
 
-    private static Map<String, HeavenlyBody> solarSystem = new HashMap<>();
+    private static Map<HeavenlyBody.Key, HeavenlyBody> solarSystem = new HashMap<>();
     private static Set<HeavenlyBody> planets = new HashSet<>();
 
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
@@ -12,6 +12,109 @@ public class Main {
     private static StockList stockList = new StockList();
 
     public static void main(String[] args) {
+
+        HeavenlyBody temp = new Planet("Mercury", 88);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        temp = new Planet("Venus", 225);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        temp = new Planet("Earth", 365);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        HeavenlyBody tempMoon = new Moon("Moon", 27);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        temp = new Planet("Mars", 687);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        tempMoon = new Moon("Deimos", 1.3);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        tempMoon = new Moon("Phobos", 0.3);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+
+        temp = new Planet("Jupiter", 4332);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        tempMoon = new Moon("Io", 1.8);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        tempMoon = new Moon("Europa", 3.5);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        tempMoon = new Moon("Ganymede", 7.1);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        tempMoon = new Moon("Callisto", 16.7);
+        solarSystem.put(tempMoon.getKey(), tempMoon);
+        temp.addSatellite(tempMoon);
+
+        temp = new Planet("Uranus", 30660);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        temp = new Planet("Neptune", 165);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        temp = new Planet("Pluto", 248);
+        solarSystem.put(temp.getKey(), temp);
+        planets.add(temp);
+
+        System.out.println("Planets");
+        for(HeavenlyBody planet : planets) {
+            //System.out.println(planet);
+            System.out.println("\t" + planet.getKey());
+        }
+
+        //HeavenlyBody body = solarSystem.get("Jupiter");
+        //HeavenlyBody body = solarSystem.get(HeavenlyBody.makeKey("Jupiter", HeavenlyBody.BodyTypes.PLANET));
+        System.out.println("Moons of" + body.getKey());
+        for(HeavenlyBody jupiterMoon : body.getSatellites()) {
+            System.out.println("\t" + jupiterMoon.getKey());
+        }
+
+        Set<HeavenlyBody> moons = new HashSet<>();
+        for(HeavenlyBody planet : planets) {
+            moons.addAll(planet.getSatellites());
+        }
+
+        System.out.println("All Moons");
+        for(HeavenlyBody moon : moons) {
+            System.out.println("\t" + moon.getKey());
+        }
+
+        HeavenlyBody pluto = new DwarfPlanet("Pluto", 842);
+        planets.add(pluto);
+
+        for(HeavenlyBody planet : planets) {
+            System.out.println(planet);
+        }
+
+        HeavenlyBody earth1 = new Planet("Earth", 365);
+        HeavenlyBody earth2 = new Planet("Earth", 365);
+        System.out.println(earth1.equals(earth2));
+        System.out.println(earth1.equals(earth1));
+        System.out.println(earth1.equals(pluto));
+        System.out.println(pluto.equals(earth1));
+
+//        Object o = new Object();
+//        o.equals(o);
+//        "pluto".equals("");
+
 
 //        StockItem tempStockItem = new StockItem("bread", 0.75, 100);
 //        stockList.addStock(tempStockItem);
@@ -69,132 +172,41 @@ public class Main {
 //        System.out.println(stockList);
 //
 //
-//        HeavenlyBody temp = new HeavenlyBody("Mercury", 88);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        temp = new HeavenlyBody("Venus", 225);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        temp = new HeavenlyBody("Earth", 365);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        temp = new HeavenlyBody("Mars", 687);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        tempMoon = new HeavenlyBody("Deimos", 1.3);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        tempMoon = new HeavenlyBody("Phobos", 0.3);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//
-//        temp = new HeavenlyBody("Jupiter", 4332);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        tempMoon = new HeavenlyBody("Io", 1.8);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        tempMoon = new HeavenlyBody("Europa", 3.5);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        tempMoon = new HeavenlyBody("Ganymede", 7.1);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        tempMoon = new HeavenlyBody("Callisto", 16.7);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        temp = new HeavenlyBody("Uranus", 30660);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        temp = new HeavenlyBody("Neptune", 165);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        temp = new HeavenlyBody("Pluto", 248);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//
-//        System.out.println("Planets");
-//        for(HeavenlyBody planet : planets) {
-//            System.out.println("\t" + planet.getName());
-//        }
-//
-//        HeavenlyBody body = solarSystem.get("Jupiter");
-//        System.out.println("Moons of" + body.getName());
-//        for(HeavenlyBody jupiterMoon : body.getSatellites()) {
-//            System.out.println("\t" + jupiterMoon.getName());
-//        }
-//
-//        Set<HeavenlyBody> moons = new HashSet<>();
-//        for(HeavenlyBody planet : planets) {
-//            moons.addAll(planet.getSatellites());
-//        }
-//
-//        System.out.println("All Moons");
-//        for(HeavenlyBody moon : moons) {
-//            System.out.println("\t" + moon.getName());
-//        }
-//
-//        HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
-//        planets.add(pluto);
-//
-//        for(HeavenlyBody planet : planets) {
-//            System.out.println(planet.getName());
-//        }
-//
-//        Object o = new Object();
-//        o.equals(o);
-//        "pluto".equals("");
 
 
-
-        Scanner scanner = new Scanner(System.in);
-
-        Map<String, Integer> tempExit = new HashMap<String, Integer>();
-        locations.put(0, new Location(0, "sitting in front of your computer",tempExit));
-
-        tempExit = new HashMap<String, Integer>();
-        tempExit.put("W", 2);
-        tempExit.put("E", 3);
-        tempExit.put("S", 4);
-        tempExit.put("N", 5);
-        locations.put(1, new Location(1, "end of the road at a bridge",tempExit));
-
-        tempExit = new HashMap<String, Integer>();
-        tempExit.put("N", 5);
-        locations.put(2, new Location(2, "at the top of a hill",tempExit));
-
-        tempExit = new HashMap<String, Integer>();
-        tempExit.put("W", 1);
-        locations.put(3, new Location(3, "inside a building",tempExit));
-
-        tempExit = new HashMap<String, Integer>();
-        tempExit.put("N", 1);
-        tempExit.put("W", 2);
-        locations.put(4, new Location(4, "in a valley beside a stream",tempExit));
-
-        tempExit = new HashMap<String, Integer>();
-        tempExit.put("S", 1);
-        tempExit.put("W", 2);
-        locations.put(5, new Location(5, "in a forest",tempExit));
-
-        command("Go North young man");
+//
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        Map<String, Integer> tempExit = new HashMap<String, Integer>();
+//        locations.put(0, new Location(0, "sitting in front of your computer",tempExit));
+//
+//        tempExit = new HashMap<String, Integer>();
+//        tempExit.put("W", 2);
+//        tempExit.put("E", 3);
+//        tempExit.put("S", 4);
+//        tempExit.put("N", 5);
+//        locations.put(1, new Location(1, "end of the road at a bridge",tempExit));
+//
+//        tempExit = new HashMap<String, Integer>();
+//        tempExit.put("N", 5);
+//        locations.put(2, new Location(2, "at the top of a hill",tempExit));
+//
+//        tempExit = new HashMap<String, Integer>();
+//        tempExit.put("W", 1);
+//        locations.put(3, new Location(3, "inside a building",tempExit));
+//
+//        tempExit = new HashMap<String, Integer>();
+//        tempExit.put("N", 1);
+//        tempExit.put("W", 2);
+//        locations.put(4, new Location(4, "in a valley beside a stream",tempExit));
+//
+//        tempExit = new HashMap<String, Integer>();
+//        tempExit.put("S", 1);
+//        tempExit.put("W", 2);
+//        locations.put(5, new Location(5, "in a forest",tempExit));
+//
+//        command("Go North young man");
 
 //        Map<String, String> vocabulary = new HashMap<String, String>();
 //        vocabulary.put("QUIT", "Q");
@@ -254,41 +266,41 @@ public class Main {
 //            System.out.println(i);
 //        }
 
-        System.out.println("******************");
-        Theatre theatre = new Theatre("Baghdad", 8, 12);
+//        System.out.println("******************");
+//        Theatre theatre = new Theatre("Baghdad", 8, 12);
         // shallow copy
 //        List<Theatre.Seat> seatCopy = new ArrayList<>(theatre.seats);
 //        printList(seatCopy);
 
         //seatCopy.get(1).reserve();
-
-        if (theatre.reserveSeat("D12")) {
-            System.out.println("Please pay");
-        } else {
-            System.out.println("Sorry, this seat is taken");
-        }
-
-        if (theatre.reserveSeat("D12")) {
-            System.out.println("Please pay");
-        } else {
-            System.out.println("Sorry, this seat is taken");
-        }
-
-        if (theatre.reserveSeat("B13")) {
-            System.out.println("Please pay");
-        } else {
-            System.out.println("Sorry, this seat is taken");
-        }
-
-        List<Theatre.Seat> reverseSeats = new ArrayList<>(theatre.getSeats());
-        Collections.reverse(reverseSeats);
-        printList(reverseSeats);
-
-        List<Theatre.Seat> priceSeats = new ArrayList<>(theatre.getSeats());
-        priceSeats.add(theatre.new Seat("B00", 13.00));
-        priceSeats.add(theatre.new Seat("A00", 13.00));
-        Collections.sort(priceSeats, Theatre.PRICE_ORDER);
-        printList(priceSeats);
+//
+//        if (theatre.reserveSeat("D12")) {
+//            System.out.println("Please pay");
+//        } else {
+//            System.out.println("Sorry, this seat is taken");
+//        }
+//
+//        if (theatre.reserveSeat("D12")) {
+//            System.out.println("Please pay");
+//        } else {
+//            System.out.println("Sorry, this seat is taken");
+//        }
+//
+//        if (theatre.reserveSeat("B13")) {
+//            System.out.println("Please pay");
+//        } else {
+//            System.out.println("Sorry, this seat is taken");
+//        }
+//
+//        List<Theatre.Seat> reverseSeats = new ArrayList<>(theatre.getSeats());
+//        Collections.reverse(reverseSeats);
+//        printList(reverseSeats);
+//
+//        List<Theatre.Seat> priceSeats = new ArrayList<>(theatre.getSeats());
+//        priceSeats.add(theatre.new Seat("B00", 13.00));
+//        priceSeats.add(theatre.new Seat("A00", 13.00));
+//        Collections.sort(priceSeats, Theatre.PRICE_ORDER);
+//        printList(priceSeats);
 
 //
 //        Collections.reverse(seatCopy);
